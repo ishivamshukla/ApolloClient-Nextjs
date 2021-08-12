@@ -3,16 +3,11 @@ import { ApolloProvider } from "@apollo/client";
 import client from "../apollo-client";
 
 function MyApp({ Component, pageProps }) {
-  return <><ApolloProvider client={client}>
+  return ( <ApolloProvider client={client}>
     <Component {...pageProps} />
-  </ApolloProvider></>
+  </ApolloProvider>
+
+  )
 }
 
 export default MyApp
-// function MyApp({ Component, pageProps }) {
-//   return (
-//     <ApolloProvider client={client}>
-//       <Component {...pageProps} />
-//     </ApolloProvider>
-//   );
-// }
